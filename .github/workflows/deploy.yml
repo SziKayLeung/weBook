@@ -31,6 +31,10 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Build with mdBook
         run: mdbook build
+
+      # Explicitly add .nojekyll to prevent Jekyll processing
+      - name: Disable Jekyll
+        run: touch ./book/.nojekyll
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
