@@ -23,6 +23,7 @@ The code below in the `base.html` is used to create the style and tabs:
 ![bookmark](../Images/DjangoBookmark.jpg)
 
 ```html
+{% raw %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -66,13 +67,16 @@ The code below in the `base.html` is used to create the style and tabs:
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
+{% endraw %}
 ```
 
 To create a new tab (i.e Contact), include the code with appropriate indentation:
 ```html
+{% raw %}
 <li class="nav-item active">
     <a class="nav-link active" href="{% url 'contact' %}">Contact</a>
 </li>
+{% endraw %}
 ```
 The `contact.html` then needs to be placed in the same `templates` folder. 
 
@@ -86,6 +90,7 @@ The code below in the `home.html` is used to create the homapage.
 ![bookmark](../Images/homepage.jpg)
 
 ```html
+{% raw %}
 {% extends 'base.html' %}
 {% block content %}
 <h1>Long read brain transcriptome dataset</h1>
@@ -99,4 +104,5 @@ Please refer to <a href="https://www.biorxiv.org/content/10.1101/2024.09.09.6120
 <a href="https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&lastVirtModeType=default&lastVirtModeExtraState=&virtModeType=default&virtMode=0&nonVirtPosition=&position=chr6%3A105273218%2D105403082&hgsid=2355395487_u493yeIu7Ry5BcMRNmxfUqkeKryA"> transcripts detected on UCSC Genome Browser</a>.
 
 {% endblock  %}
+{% endraw %}
 ```
