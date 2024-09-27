@@ -1,0 +1,9 @@
+[book]
+authors = ["SziKayLeung"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Web Resource"
+
+[output.html]
+additional-css = ["./src/css/custom.css"]
